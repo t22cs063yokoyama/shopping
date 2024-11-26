@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Delete {% endblock %}
+
+{% block main %}
+<form action="{% url 'shoppinglist:delete' %}" method="post">
+{% csrf_token %}
+{{ form }}
+<input type="submit"/>
+</form>
+<ul>
+    <li><a href="{% url 'shoppinglist:add' %}">送信</a></li>
+</ul>
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Button Link Sample</title>
+</head>
+<body>
+  <input type="button" onclick="location.href='./templates/shoppinglist/item_check.html'" value="警告">
+</body>
+</html>
+
+{% endblock %}
+
