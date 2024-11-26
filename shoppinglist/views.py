@@ -91,5 +91,5 @@ class ItemDeleteView(TemplateView):
         context['form'] = ItemIdForm()
         return context
     
-def index(request):
-   return render(request, 'shoppinglist/item_check.html')
+class ItemCheckView(TemplateView):
+    template_name = 'shoppinglist/item_check.html'
